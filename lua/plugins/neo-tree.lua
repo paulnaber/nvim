@@ -11,13 +11,19 @@ return {
   },
   cmd = 'Neotree',
   keys = {
-    { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    { '<leader>e', ':Neotree toggle<CR>', desc = 'Toggle NeoTree', silent = true },
   },
   opts = {
     filesystem = {
+      filtered_items = {
+        visible = true, -- Always show hidden files
+      },
       window = {
+        width = 40, -- Adjusted width for better visibility
         mappings = {
-          ['\\'] = 'close_window',
+          ['l'] = 'open', -- Open files and directories
+          ['h'] = 'close_node', -- Close directories
+          ['<leader>e'] = 'close_window',
         },
       },
     },
