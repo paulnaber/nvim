@@ -10,6 +10,5 @@ https://github.com/nvim-lua/kickstart.nvim
 - harpoon?
 - leap or eazymotion
 - better colortheme
-- lazygit
 - comments for good commands commands as a remainder
 
