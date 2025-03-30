@@ -46,7 +46,7 @@ require('lazy').setup({
   require 'plugins.lazygit',
   -- require 'plugins.sneak',
   -- require 'plugins.harpoon'
-  require 'plugins.bufferline',
+  -- require 'plugins.bufferline',
   require 'plugins.supermaven',
   require 'plugins.flash',
 }, {
