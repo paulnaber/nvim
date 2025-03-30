@@ -55,7 +55,7 @@ return { -- Autocompletion
         -- Select the [n]ext item
         [keymaps.autocompletion.select_next_item] = cmp.mapping.select_next_item(),
         -- Select the [p]revious item
-        [keymaps.autocompletion.select_next_item] = cmp.mapping.select_prev_item(),
+        [keymaps.autocompletion.select_prev_item] = cmp.mapping.select_prev_item(),
 
         -- Scroll the documentation window [b]ack / [f]orward
         [keymaps.autocompletion.scroll_docs_back] = cmp.mapping.scroll_docs(-4),

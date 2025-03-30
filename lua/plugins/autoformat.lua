@@ -5,7 +5,7 @@ return { -- Autoformat
   cmd = { 'ConformInfo' },
   keys = {
     {
-      'keymaps.autoformat.format',
+      keymaps.autoformat.format,
       function()
         require('conform').format {
           async = true,
