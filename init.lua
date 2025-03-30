@@ -33,7 +33,8 @@ require('lazy').setup({
   require 'lsp', -- language server protocol setup, add languages here
   require 'plugins.autoformat', -- format on save
   require 'plugins.autocompletion',
-  require 'plugins.tokyonight', -- themes
+  -- require 'plugins.tokyonight', -- themes
+  require 'plugins.monokai', -- themes
   require 'plugins.todo-comments', -- highlighings
   require 'plugins.mini', -- collection of many smaller plugins
   require 'plugins.treesitter', -- better syntax highlighing and more
