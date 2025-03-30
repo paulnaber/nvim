@@ -15,15 +15,15 @@ M.autocompletion = {
   complete = '<C-Space>',
 }
 
-M.gitsigns = {
-  stage_hunk = '<leader>hs',
-  reset_hunk = '<leader>hr',
-  stage_buffer = '<leader>hS',
-  reset_buffer = '<leader>hR',
-  preview_hunk = '<leader>hp',
-  blame_line = '<leader>hb',
-  diffthis = '<leader>hd',
-}
+-- M.gitsigns = {
+--   stage_hunk = '<leader>hs',
+--   reset_hunk = '<leader>hr',
+--   stage_buffer = '<leader>hS',
+--   reset_buffer = '<leader>hR',
+--   preview_hunk = '<leader>hp',
+--   blame_line = '<leader>hb',
+--   diffthis = '<leader>hd',
+-- }
 M.lazygit = { open = '<leader>gg' }
 M.neotree = { toggleTree = '<leader>e', toggleGitTree = '<leader>ge', open = 'l', close = 'h' }
 M.lsp = {
@@ -50,6 +50,16 @@ M.bufferline = {
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 vim.keymap.set('n', '<leader>w', ':w<CR>', { noremap = true, silent = true })
+
+-- easy marks
+vim.keymap.set('n', '<c-1>', 'mA')
+vim.keymap.set('n', '<c-2>', 'mB')
+vim.keymap.set('n', '<c-3>', 'mC')
+vim.keymap.set('n', '<c-4>', 'mD')
+vim.keymap.set('n', '<S-1>', "'A")
+vim.keymap.set('n', '<S-2>', "'B")
+vim.keymap.set('n', '<S-3>', "'C")
+vim.keymap.set('n', '<S-4>', "'D")
 
 -- vim.keymap.set('n', 'J', '5jzz')
 -- vim.keymap.set('n', 'K', '5kzz')

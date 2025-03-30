@@ -39,13 +39,13 @@ require('lazy').setup({
   require 'plugins.mini', -- collection of many smaller plugins
   require 'plugins.treesitter', -- better syntax highlighing and more
   -- require 'plugins.debug',
-  -- require 'plugins.indent_line',
+  require 'plugins.indent_line',
   -- require 'plugins.lint',
   require 'plugins.autopairs',
   require 'plugins.neo-tree', -- file tree, git tree
   require 'plugins.lazygit',
   -- require 'plugins.sneak',
-  -- require 'plugins.harpoon'
+  require 'plugins.harpoon',
   -- require 'plugins.bufferline',
   require 'plugins.supermaven',
   require 'plugins.flash',
