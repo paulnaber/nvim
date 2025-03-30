@@ -24,13 +24,19 @@ M.gitsigns = {
   blame_line = '<leader>hb',
   diffthis = '<leader>hd',
 }
-M.lazygit = {
-  open = '<leader>gg',
-}
-M.neotree = {
-  openclose = '<leader>e',
-  open = 'l',
-  close = 'h',
+M.lazygit = { open = '<leader>gg' }
+M.neotree = { openclose = '<leader>e', open = 'l', close = 'h' }
+M.lsp = {
+  goto_definition = 'gd',
+  goto_declaration = 'gD',
+  goto_references = 'gr',
+  goto_implementation = 'gI',
+  goto_type_definition = '<leader>D',
+  goto_document_symbols = '<leader>ds',
+  goto_workspace_symbols = '<leader>ws',
+  rename = '<leader>rn',
+  hover = 'gh',
+  code_action = '<leader>ca',
 }
 
 -- Clear highlights on search when pressing <Esc> in normal mode
