@@ -1,4 +1,3 @@
-
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -7,6 +6,18 @@ vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
+
+vim.keymap.set('n', 'U', '<c-u>zz')
+vim.keymap.set('n', 'D', '<c-d>zz')
+
+-- move lines
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+
+-- Search
+-- vim.o.incsearch = true -- starts searching as soon as typing, without enter needed
+-- vim.o.ignorecase = true -- ignore letter case when searching
+-- vim.o.smartcase = true -- case insentive unless capitals used in searcher
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`

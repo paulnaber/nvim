@@ -11,5 +11,7 @@ https://github.com/nvim-lua/kickstart.nvim
 - leap or eazymotion
 - better colortheme
 - comments for good commands commands as a remainder
-- tabs?
+- tabs
+- nx generators
+- show git lense all the time
 

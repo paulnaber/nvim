@@ -24,7 +24,6 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 -- Load Plugins
--- TODO
 require('lazy').setup({
   'tpope/vim-sleuth',
   require 'plugins.telescope', -- fuzzy finder of everything (files, buffer, ...)
@@ -45,6 +44,7 @@ require('lazy').setup({
   require 'plugins.neo-tree',
   require 'plugins.lazygit',
   -- require 'plugins.sneak',
+  -- require 'plugins.harpoon'
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
