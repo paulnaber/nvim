@@ -38,7 +38,14 @@ M.lsp = {
   hover = 'gh',
   code_action = '<leader>ca',
 }
-
+M.bufferline = {
+  toggle_pin = '<leader>tp',
+  delete_non_pinned = '<leader>tw',
+  delete_all_other = '<leader>to',
+  close_current = '<leader>td',
+  cycle_prev = '<S-h>',
+  cycle_next = '<S-l>',
+}
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
