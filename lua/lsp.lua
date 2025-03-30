@@ -160,6 +160,9 @@ return {
     -- Enable the following language servers
     --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
     --
+    -- ADD THIS HELPER for root patterns (needed for Nx)
+    local util = require 'lspconfig.util'
+    --
     --  Add any additional override configuration in the following tables. Available keys are:
     --  - cmd (table): Override the default command used to start the server
     --  - filetypes (table): Override the default list of associated filetypes for the server
@@ -179,14 +182,52 @@ return {
       -- But for many setups, the LSP (`ts_ls`) will work just fine
       ts_ls = {},
       --
+      -- Angular Language Server with Nx root detection
       angularls = {
-        cmd = { 'angular-ls', '--stdio' },
-        filetypes = { 'typescript', 'html', 'typescriptreact', 'javascriptreact' },
-        settings = {
-          angular = {
-            enable = true,
-          },
-        },
+        -- Removed cmd and filetypes - mason-lspconfig usually handles defaults well.
+        -- Keep specific settings if needed.
+        -- settings = { angular = { enable = true } }, -- Keep if necessary, often default
+        root_dir = util.root_pattern('angular.json', 'nx.json'),
+        -- You might want to ensure angularls covers necessary filetypes, though defaults are often good.
+        -- filetypes = { 'typescript', 'html', 'typescriptreact', 'javascriptreact', 'typescript.tsx', 'htmlangular' }, -- You can uncomment/adjust if needed
+      },
+
+      -- JSON Language Server
+      jsonls = {
+        -- Often works well with defaults, add settings if needed
+        -- Example: Schemas
+        -- settings = {
+        --   json = {
+        --     schemas = require('schemastore').json.schemas(),
+        --     validate = { enable = true },
+        --   },
+        -- },
+      },
+
+      -- YAML Language Server
+      yamlls = {
+        -- Often works well with defaults, add settings if needed
+        -- Example: Schemas (requires nvim-jsonls extension usually)
+        -- settings = {
+        --   yaml = {
+        --     schemaStore = {
+        --       enable = true,
+        --       url = 'https://www.schemastore.org/api/json/catalog.json',
+        --     },
+        --     schemas = require('schemastore').yaml.schemas(),
+        --   },
+        -- },
+      },
+
+      -- Go Language Server
+      gopls = {
+        -- Add specific Go settings here if desired, like from the example config
+        -- settings = {
+        --   gopls = {
+        --      gofumpt = true,
+        --      -- ... other gopls settings ...
+        --   }
+        -- }
       },
 
       lua_ls = {
