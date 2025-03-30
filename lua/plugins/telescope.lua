@@ -1,4 +1,5 @@
 -- Fuzzy Finder (files, lsp, etc)
+local keymaps = require 'keymaps' -- Import keymaps
 return {
   'nvim-telescope/telescope.nvim',
   event = 'VimEnter',
@@ -98,10 +99,10 @@ return {
     --     desc = '[ ] Find existing buffers'
     -- })
 
-    vim.keymap.set('n', '<leader><leader>', builtin.find_files, {
+    vim.keymap.set('n', keymaps.telescope.find_files, builtin.find_files, {
       desc = 'Search Files',
     })
-    vim.keymap.set('n', '<leader>/', builtin.live_grep, {
+    vim.keymap.set('n', keymaps.telescope.live_grep, builtin.live_grep, {
       desc = 'Live Grep Search',
     })
 

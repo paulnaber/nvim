@@ -1,3 +1,4 @@
+local keymaps = require 'keymaps'
 return {
   'nvim-neo-tree/neo-tree.nvim',
   version = '*',
@@ -9,7 +10,7 @@ return {
   cmd = 'Neotree',
   keys = {
     {
-      '<leader>e',
+      keymaps.neotree.openclose,
       function()
         local neotree = require 'neo-tree.command'
         if vim.bo.filetype == 'neo-tree' then
@@ -30,8 +31,8 @@ return {
       window = {
         width = 40, -- Increased width
         mappings = {
-          ['l'] = 'open', -- Open files and expand directories
-          ['h'] = 'close_node', -- Close directories
+          [keymaps.neotree.open] = 'open', -- Open files and expand directories
+          [keymaps.neotree.close] = 'close_node', -- Close directories
         },
       },
     },
