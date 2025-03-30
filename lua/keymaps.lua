@@ -49,7 +49,7 @@ M.bufferline = {
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
-vim.keymap.set('n', '<leader>w', ':w<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>w', ':w<CR>', { noremap = true, silent = true, desc = 'Save file' })
 
 -- easy marks
 vim.keymap.set('n', '<c-1>', 'mA')
@@ -60,6 +60,9 @@ vim.keymap.set('n', '<S-1>', "'A")
 vim.keymap.set('n', '<S-2>', "'B")
 vim.keymap.set('n', '<S-3>', "'C")
 vim.keymap.set('n', '<S-4>', "'D")
+
+-- splits quit with :q
+vim.keymap.set('n', '<leader>v', ':vsplit<CR>', { desc = 'Vertical split' })
 
 -- vim.keymap.set('n', 'J', '5jzz')
 -- vim.keymap.set('n', 'K', '5kzz')
