@@ -25,7 +25,7 @@ M.gitsigns = {
   diffthis = '<leader>hd',
 }
 M.lazygit = { open = '<leader>gg' }
-M.neotree = { openclose = '<leader>e', open = 'l', close = 'h' }
+M.neotree = { toggleTree = '<leader>e', toggleGitTree = '<leader>ge', open = 'l', close = 'h' }
 M.lsp = {
   goto_definition = 'gd',
   goto_declaration = 'gD',

@@ -1,4 +1,5 @@
 local keymaps = require 'keymaps'
+
 return {
   'nvim-neo-tree/neo-tree.nvim',
   version = '*',
@@ -10,7 +11,7 @@ return {
   cmd = 'Neotree',
   keys = {
     {
-      keymaps.neotree.openclose,
+      keymaps.neotree.toggleTree,
       function()
         local neotree = require 'neo-tree.command'
         if vim.bo.filetype == 'neo-tree' then
@@ -24,14 +25,36 @@ return {
       desc = 'Toggle NeoTree focus and reveal file',
       silent = true,
     },
+    {
+      keymaps.neotree.toggleGitTree,
+      function()
+        if vim.bo.filetype == 'neo-tree' then
+          vim.cmd 'Neotree close'
+        else
+          vim.cmd 'Neotree source=git_status reveal'
+        end
+      end,
+      desc = 'Toggle NeoTree Git status',
+      silent = true,
+    },
   },
   opts = {
     filesystem = {
       filtered_items = {
         visible = true, -- Always show hidden files
       },
+      git_status = true, -- Show git status for files
       window = {
         width = 40, -- Increased width
+        mappings = {
+          [keymaps.neotree.open] = 'open', -- Open files and expand directories
+          [keymaps.neotree.close] = 'close_node', -- Close directories
+        },
+      },
+    },
+    git_status = { -- Add the same mappings for git_status
+      window = {
+        width = 40,
         mappings = {
           [keymaps.neotree.open] = 'open', -- Open files and expand directories
           [keymaps.neotree.close] = 'close_node', -- Close directories

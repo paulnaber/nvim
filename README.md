@@ -6,8 +6,8 @@ https://github.com/nvim-lua/kickstart.nvim
 
 ### TODOs
 - harpoon?
-- leap or eazymotion
 - nx generators
 - show git lense all the time
 - angular lsp setup
+- prettier
 

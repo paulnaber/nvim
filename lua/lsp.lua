@@ -179,7 +179,15 @@ return {
       -- But for many setups, the LSP (`ts_ls`) will work just fine
       ts_ls = {},
       --
-      angularls = {},
+      angularls = {
+        cmd = { 'angular-ls', '--stdio' },
+        filetypes = { 'typescript', 'html', 'typescriptreact', 'javascriptreact' },
+        settings = {
+          angular = {
+            enable = true,
+          },
+        },
+      },
 
       lua_ls = {
         -- cmd = { ... },

@@ -7,9 +7,6 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
-vim.keymap.set('n', 'U', '<c-u>zz')
-vim.keymap.set('n', 'D', '<c-d>zz')
-
 -- move lines
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
