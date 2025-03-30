@@ -14,12 +14,14 @@ return {
       function()
         local neotree = require 'neo-tree.command'
         if vim.bo.filetype == 'neo-tree' then
+          -- If already in Neo-tree, close it
           vim.cmd 'Neotree close'
         else
-          vim.cmd 'Neotree focus'
+          -- If inside a file, open Neo-tree and reveal the file
+          vim.cmd 'Neotree reveal'
         end
       end,
-      desc = 'Toggle NeoTree focus',
+      desc = 'Toggle NeoTree focus and reveal file',
       silent = true,
     },
   },
