@@ -6,6 +6,5 @@ https://github.com/nvim-lua/kickstart.nvim
 
 ### TODOs
 
-- add splits
 - nx generators
 - chatgpt, supermaven chat
