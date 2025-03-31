@@ -2,7 +2,7 @@
 -- NOTE: gitsigns is already included in init.lua but contains only the base
 -- config. This will add also the recommended keymaps.
 -- See `:help gitsigns` to understand what the configuration keys do
--- local keymaps = require 'keymaps'
+local keymaps = require 'keymaps'
 
 return {
   {
@@ -12,11 +12,11 @@ return {
       on_attach = function(bufnr)
         local gitsigns = require 'gitsigns'
 
-        -- local function map(mode, l, r, opts)
-        --   opts = opts or {}
-        --   opts.buffer = bufnr
-        --   vim.keymap.set(mode, l, r, opts)
-        -- end
+        local function map(mode, l, r, opts)
+          opts = opts or {}
+          opts.buffer = bufnr
+          vim.keymap.set(mode, l, r, opts)
+        end
 
         -- -- Navigation
         -- map('n', ']c', function()
@@ -45,12 +45,12 @@ return {
         -- end, { desc = 'git [r]eset hunk' })
         -- -- normal mode
         -- map('n', keymaps.gitsigns.stage_hunk, gitsigns.stage_hunk, { desc = 'git [s]tage hunk' })
-        -- map('n', keymaps.gitsigns.reset_hunk, gitsigns.reset_hunk, { desc = 'git [r]eset hunk' })
+        map('n', keymaps.gitsigns.reset_hunk, gitsigns.reset_hunk, { desc = 'git [r]eset hunk' })
         -- map('n', keymaps.gitsigns.stage_buffer, gitsigns.stage_buffer, { desc = 'git [S]tage buffer' })
         -- map('n', keymaps.gitsigns.reset_buffer, gitsigns.reset_buffer, { desc = 'git [R]eset buffer' })
-        -- map('n', keymaps.gitsigns.preview_hunk, gitsigns.preview_hunk, { desc = 'git [p]review hunk' })
+        map('n', keymaps.gitsigns.preview_hunk, gitsigns.preview_hunk, { desc = 'git [p]review hunk' })
         -- map('n', keymaps.gitsigns.blame_line, gitsigns.blame_line, { desc = 'git [b]lame line' })
-        -- map('n', keymaps.gitsigns.diffthis, gitsigns.diffthis, { desc = 'git [d]iff against index' })
+        map('n', keymaps.gitsigns.diffthis, gitsigns.diffthis, { desc = 'git [d]iff against index' })
         -- map('n', '<leader>hD', function()
         --   gitsigns.diffthis '@'
         -- end, { desc = 'git [D]iff against last commit' })

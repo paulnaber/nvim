@@ -14,16 +14,15 @@ M.autocompletion = {
   confirm = '<CR>',
   complete = '<C-Space>',
 }
-
--- M.gitsigns = {
---   stage_hunk = '<leader>hs',
---   reset_hunk = '<leader>hr',
---   stage_buffer = '<leader>hS',
---   reset_buffer = '<leader>hR',
---   preview_hunk = '<leader>hp',
---   blame_line = '<leader>hb',
---   diffthis = '<leader>hd',
--- }
+M.gitsigns = {
+  --   stage_hunk = '<leader>hs',
+  reset_hunk = '<leader>gr',
+  --   stage_buffer = '<leader>hS',
+  --   reset_buffer = '<leader>hR',
+  preview_hunk = '<leader>gp',
+  --   blame_line = '<leader>hb',
+  diffthis = '<leader>gd',
+}
 M.lazygit = { open = '<leader>gg' }
 M.neotree = { toggleTree = '<leader>e', toggleGitTree = '<leader>ge', open = 'l', close = 'h' }
 M.lsp = {
@@ -46,10 +45,15 @@ M.bufferline = {
   cycle_prev = '<S-h>',
   cycle_next = '<S-l>',
 }
+M.harpoon = {
+  harpoon_file = '<leader>H',
+  quick_menu = '<leader>h',
+  leader = '<leader>', -- 1 to 9 for quick harpooning
+}
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
-vim.keymap.set('n', '<leader>w', ':w<CR>', { noremap = true, silent = true, desc = 'Save file' })
+-- vim.keymap.set('n', '<leader>w', ':w<CR>', { noremap = true, silent = true, desc = 'Save file' })
 
 -- easy marks
 vim.keymap.set('n', '<c-1>', 'mA')
@@ -63,6 +67,9 @@ vim.keymap.set('n', '<S-4>', "'D")
 
 -- splits quit with :q
 vim.keymap.set('n', '<leader>v', ':vsplit<CR>', { desc = 'Vertical split' })
+
+-- make quit a little bit easier
+vim.keymap.set('n', '<leader>q', ':q<CR>', { desc = 'Quit :q' })
 
 -- vim.keymap.set('n', 'J', '5jzz')
 -- vim.keymap.set('n', 'K', '5kzz')

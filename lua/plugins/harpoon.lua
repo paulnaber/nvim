@@ -1,3 +1,4 @@
+local keymaps = require 'keymaps'
 return {
   'ThePrimeagen/harpoon',
   branch = 'harpoon2',
@@ -12,14 +13,14 @@ return {
   keys = function()
     local keys = {
       {
-        '<leader>H',
+        keymaps.harpoon.harpoon_file,
         function()
           require('harpoon'):list():add()
         end,
         desc = 'Harpoon File',
       },
       {
-        '<leader>h',
+        keymaps.harpoon.quick_menu,
         function()
           local harpoon = require 'harpoon'
           harpoon.ui:toggle_quick_menu(harpoon:list())
@@ -37,6 +38,7 @@ return {
         desc = 'Harpoon to File ' .. i,
       })
     end
+
     return keys
   end,
 }
