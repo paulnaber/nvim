@@ -12,6 +12,7 @@ return {
     -- Useful status updates for LSP.
     { 'j-hui/fidget.nvim', opts = {} }, -- Allows extra capabilities provided by nvim-cmp
     'hrsh7th/cmp-nvim-lsp',
+    'jose-elias-alvarez/null-ls.nvim', -- Add null-ls for eslint_d
   },
   config = function()
     vim.api.nvim_create_autocmd('LspAttach', {
@@ -262,6 +263,7 @@ return {
       'stylua', -- Used to format Lua code
       'prettier',
       'prettierd',
+      'eslint_d',
     })
     require('mason-tool-installer').setup {
       ensure_installed = ensure_installed,
@@ -279,6 +281,15 @@ return {
           server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
           require('lspconfig')[server_name].setup(server)
         end,
+      },
+    }
+
+    -- Configure null-ls for eslint_d
+    local null_ls = require 'null-ls'
+    null_ls.setup {
+      sources = {
+        null_ls.builtins.diagnostics.eslint_d,
+        null_ls.builtins.formatting.eslint_d,
       },
     }
   end,
