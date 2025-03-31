@@ -8,3 +8,4 @@ https://github.com/nvim-lua/kickstart.nvim
 
 - nx generators
 - chatgpt, supermaven chat
+- git history to telescope
