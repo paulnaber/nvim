@@ -53,8 +53,6 @@ M.harpoon = {
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
--- vim.keymap.set('n', '<leader>w', ':w<CR>', { noremap = true, silent = true, desc = 'Save file' })
-
 -- easy marks
 vim.keymap.set('n', '<c-1>', 'mA')
 vim.keymap.set('n', '<c-2>', 'mB')
@@ -68,8 +66,10 @@ vim.keymap.set('n', '<S-4>', "'D")
 -- splits quit with :q
 vim.keymap.set('n', '<leader>v', ':vsplit<CR>', { desc = 'Vertical split' })
 
--- make quit a little bit easier
-vim.keymap.set('n', '<leader>q', ':q<CR>', { desc = 'Quit :q' })
+-- vim.keymap.set('n', '<leader>q', ':q<CR>', { desc = 'Quit :q' })
+vim.keymap.set('n', '<leader>w', ':w<CR>', { noremap = true, silent = true, desc = 'Save file' })
+
+vim.keymap.set('n', 'U', '<C-r>', { desc = 'Redo' })
 
 -- vim.keymap.set('n', 'J', '5jzz')
 -- vim.keymap.set('n', 'K', '5kzz')
