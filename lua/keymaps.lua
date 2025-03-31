@@ -50,6 +50,12 @@ M.harpoon = {
   quick_menu = '<leader>h',
   leader = '<leader>', -- 1 to 9 for quick harpooning
 }
+-- visual multi
+-- ctrl + n -> visually select word
+-- following n -> select next word (multi selection)
+-- do c, d, etc -> edit multi selection
+-- skip words with q
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
