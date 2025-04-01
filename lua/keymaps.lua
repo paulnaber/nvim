@@ -1,7 +1,18 @@
 -- keymaps.lua
 local M = {}
 
-M.telescope = { find_files = '<leader><leader>', live_grep = '<leader>/' }
+M.telescope = {
+  find_files = '<leader><leader>',
+  live_grep = '<leader>/',
+  help = '<leader>sh',
+  keymaps = '<leader>sk',
+  select_telecope = '<leader>ss',
+  current_word = '<leader>sw',
+  resume = '<leader>sr',
+  recent_files = '<leader>s.',
+  existing_buffers = '<leader>se',
+  nvim_config = '<leader>sn',
+}
 M.autoformat = { format = '<leader>f' }
 M.autocompletion = {
   format = '<leader>f',
