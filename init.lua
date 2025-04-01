@@ -48,8 +48,8 @@ require('lazy').setup({
   require 'plugins.harpoon',
   -- require 'plugins.bufferline',
   require 'plugins.supermaven',
-  require 'plugins.flash',
-  require 'plugins.visual-multi',
+  require 'plugins.flash', -- s for fast navigation like f and F
+  require 'plugins.visual-multi', -- multi selection
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
