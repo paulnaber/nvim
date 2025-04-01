@@ -26,11 +26,11 @@ vim.opt.rtp:prepend(lazypath)
 -- Load Plugins
 require('lazy').setup({
   'tpope/vim-sleuth',
+  require 'lsp', -- language server protocol setup, add languages here
   require 'plugins.telescope', -- fuzzy finder of everything (files, buffer, ...)
   require 'plugins.gitsigns', -- git blame stuff
   require 'plugins.which-key', -- shows helpful information about what to do
   require 'plugins.lazydev',
-  require 'lsp', -- language server protocol setup, add languages here
   require 'plugins.autoformat', -- format on save
   require 'plugins.autocompletion',
   -- require 'plugins.tokyonight', -- themes
